@@ -1,10 +1,28 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import { createRoot } from "react-dom/client"
+import "./index.css"
+import App from "./App.jsx"
+import { BrowserRouter, Routes, Route } from "react-router"
+import Root from "./Layout/Root.jsx"
+import About from "./Page/About.jsx"
+import Jobs from "./Page/Jobs.jsx"
+import Services from "./Page/Services.jsx"
+import Login from "./Auth/Login.jsx"
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+createRoot(document.getElementById("root")).render(
+  
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Root />}>
+          <Route path="/" element={<App />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/jobs" element={<Jobs />} />
+          <Route path="/services" element={<Services />} />
+
+        </Route>
+        <Route path="/login" element={<Login />} />
+
+
+      </Routes>
+    </BrowserRouter>
+
 )
