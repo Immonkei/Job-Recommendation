@@ -1,15 +1,15 @@
-import React from 'react'
-
+import React from 'react';
+import Hero from './Component/home/Hero';
+import HowItWorks from './Component/home/HowITWorks';
+import Services from './Component/home/Services';
 function App() {
-
   return (
     <>
-      <h1 className="text-3xl font-bold underline text-center">
-        Hello world!
-      </h1>
-      <p className="text-xl font-medium text-center">We are the champion of E-day this year</p>
+      <Hero/>
+      <HowItWorks />
+      <Services />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -7,6 +7,7 @@ import About from "./Page/About.jsx"
 import Jobs from "./Page/Jobs.jsx"
 import Services from "./Page/Services.jsx"
 import Login from "./Auth/Login.jsx"
+import Resgister from "./Auth/Resgister.jsx"
 
 createRoot(document.getElementById("root")).render(
   
@@ -20,6 +21,7 @@ createRoot(document.getElementById("root")).render(
 
         </Route>
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Resgister />} />
 
 
       </Routes>
